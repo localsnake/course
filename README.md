@@ -2,7 +2,6 @@ LocalsNake COURSE
 =================
 LocalsNake COURSE 是结合了社交（SNS）和课程管理系统（CMS）的学术社交网站，旨在让学生更即使得获得选修课程的通知、作业、资源，让老师得到更多的课程反馈。
 
-
 开发框架简介
 -----
 CodeIgniter 是基于模型-视图-控制器这一设计模式的。MVC 是一种将应用程序的逻辑层和表现层进行分离的方法。在实践中，由于表现层从 PHP 脚本中分离了出来，所以它允许你的网页中只包含很少的脚本。
@@ -71,3 +70,54 @@ $data = $this->Model_name->function();
 关于模型的详细说明和书写规范请参见：http://codeigniter.org.cn/user_guide/general/models.html
 
 可以看到我现在push的代码里面暂时没有Model文件，这是因为这次push还没有涉及到数据库和复杂的逻辑操作，本次push主要将主要的控制器类的框架搭好了，并对views进行了一定的划分，方便以后前后台并行工作。
+
+前台任务
+-----
+* 组织好各个view页面，动态数据先用静态文本代替，同时开始书写对应页面的js。（参考views/account/login.php 和 scripts/login.js） @bankq
+* 根据组织好的view页面编写相应页面的css(如login.css可以控制登陆页面的样式)。 @imposimon @QDXQDX
+
+下面根据各个页面来说明.其中以处理打头的为提交表单的action路径，页面结尾的为一个个视图，需要前台设计者来实现。
+
+###账户相关
+controller:Account
+####登陆页面
+* url:account/login
+* file:views/account/login.php
+* dynamic data：NULL
+
+####处理登陆
+* post index.php/account/process_login
+* param: email,password
+* return: if succ return 1  else return error_msg
+
+####注册页面
+* url:account/register
+* file:views/account/register.php
+* dynamic data: NULL
+
+####处理注册
+* post index.php/account/process_register
+* param:email,password,password2,username,gender,birthday,hometown,vcode
+* return: if succ return 1  else return error_msg
+
+####修改密码页面
+* url:account/password
+* file:views/account/passowrd.php
+* dynamic data: NULL
+
+####处理密码修改
+* post index.php/account/process_password
+* param : old_password,new_password,new_password2
+* return: if succ return 1  else return error_msg
+
+
+####取回密码页面
+* url:account/forgot_password
+* file:views/account/forgot_password.php
+* dynamic data: NULL
+
+####处理密码取回请求
+* post index.php/account/process_forgot_password
+* param: email
+* return: if succ return 1  else return error_msg
+
