@@ -76,48 +76,12 @@ $data = $this->Model_name->function();
 * 组织好各个view页面，动态数据先用静态文本代替，同时开始书写对应页面的js。（参考views/account/login.php 和 scripts/login.js） @bankq
 * 根据组织好的view页面编写相应页面的css(如login.css可以控制登陆页面的样式)。 @imposimon @QDXQDX
 
-下面根据各个页面来说明.其中以处理打头的为提交表单的action路径，页面结尾的为一个个视图，需要前台设计者来实现。
 
-###账户相关
-controller:Account
-####登陆页面
-* url:account/login
-* file:views/account/login.php
-* dynamic data：NULL
+各个页面的组织详见Wiki中的网站地图页面：
 
-####处理登陆
-* post index.php/account/process_login
-* param: email,password
-* return: if succ return 1  else return error_msg
+https://github.com/localsNake/course/wiki/网站地图
 
-####注册页面
-* url:account/register
-* file:views/account/register.php
-* dynamic data: NULL
+接口请见接口说明页面：
 
-####处理注册
-* post index.php/account/process_register
-* param:email,password,password2,username,gender,birthday,hometown,vcode
-* return: if succ return 1  else return error_msg
-
-####修改密码页面
-* url:account/password
-* file:views/account/passowrd.php
-* dynamic data: NULL
-
-####处理密码修改
-* post index.php/account/process_password
-* param : old_password,new_password,new_password2
-* return: if succ return 1  else return error_msg
-
-
-####取回密码页面
-* url:account/forgot_password
-* file:views/account/forgot_password.php
-* dynamic data: NULL
-
-####处理密码取回请求
-* post index.php/account/process_forgot_password
-* param: email
-* return: if succ return 1  else return error_msg
+https://github.com/localsNake/course/wiki/接口说明
 
