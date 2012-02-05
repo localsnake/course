@@ -4,12 +4,11 @@ function processForm(html) {
 		if (html == '1') {
 			window.location.href = "index.php";
 		} else {
-			$('#errorEcho').text(html).show('slow');
+			$('#errorEcho').html(html).show('slow');
 		}
 }
 
 $(document).ready(function() {
-	console.log('test');
 	$('#loginForm').submit(function(eve){
 		eve.preventDefault();
 		$.ajax({

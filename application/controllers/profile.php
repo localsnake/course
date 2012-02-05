@@ -5,7 +5,8 @@
 			parent::__constructor();
 		}
 		
-		function index() {
+		function news() 
+		{
 			$data['title'] = '我的动态';
 			$this->load->view('inc/header',$data);
 			$this->load->view('menu');
@@ -14,7 +15,8 @@
 			$this->load->view('inc/footer');
 		}
 		
-		function info() {
+		function info() 
+		{
 			$data['title'] = '个人资料';
 			$this->load->view('inc/header',$data);
 			$this->load->view('menu');

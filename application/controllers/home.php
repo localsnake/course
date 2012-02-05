@@ -25,7 +25,7 @@
 			$this->load->view('inc/footer');
 		}
 		
-		function newsfeed() 
+		function newsfeed()
 		{
 			$data['title'] = '社交动态';
 			$this->load->view('inc/header',$data);
@@ -33,31 +33,5 @@
 			$this->load->view('home/subnav');
 			$this->load->view('home/newsfeed');
 			$this->load->view('inc/footer');
-		}
-		
-		function announce() 
-		{
-			$data['title'] = '通知';
-			$this->load->view('inc/header',$data);
-			$this->load->view('menu');
-			$this->load->view('home/subnav');
-			$this->load->view('home/announce');
-			$this->load->view('inc/footer');
-		}
-		
-		
-		function about() 
-		{
-			$data['title'] = '关于我们';
-			$data['css'] = array('about.css');
-			$this->load->view('inc/header',$data);
-			$this->load->view('about');
-		}
-		
-		function suggest() 
-		{
-			$data['title'] = '建议';
-			$this->load->view('inc/header',$data);
-			$this->load->view('suggest');
 		}
 	}
