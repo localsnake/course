@@ -48,9 +48,9 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
+$db['default']['hostname'] = 'localhost';	// My Ip For Test
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'xiaoqiang';
+$db['default']['password'] = 'YourSQLPwd';
 $db['default']['database'] = 'sns_database';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
